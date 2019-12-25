@@ -5,7 +5,7 @@ import PMap from "./map";
 let container, proton, defaultEmitter;
 const piMap = new PMap();
 
-const PowerInput = {
+const PowerModeInput = {
   container: null,
   make(node, config = {}) {
     if (typeof node === "string") node = document.querySelector(node);
@@ -237,4 +237,4 @@ const getCursorPosition = e => {
   return getCursorXY(input, selectionEnd);
 };
 
-export default PowerInput;
+export default PowerModeInput;

@@ -1,35 +1,35 @@
-# PowerInput
+# PowerModeInput
 
-[![NPM](https://img.shields.io/npm/v/power-input.svg)](https://www.npmjs.com/package/power-input) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/power-mode-input.svg)](https://www.npmjs.com/package/power-mode-input) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> PowerInput can make your text input box more compelling
+> PowerModeInput can make your text input box more compelling
 
 This project can make your input box lively. One day I saw a vscode plugin called [`Power Mode`](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode), so I wanted to write a similar javascript library. This project uses [`proton.js`](https://github.com/a-jie/Proton) and it is also great.
 
 #### By the way recommend a great react particle animation background component [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
 ### Online demo
-* demo [https://codesandbox.io/s/power-input-l45h1](https://codesandbox.io/s/power-input-l45h1)
+* demo [https://codesandbox.io/s/power-mode-input-l45h1](https://codesandbox.io/s/power-mode-input-l45h1)
 
-![](https://github.com/lindelof/power-input/blob/master/image/01.gif?raw=true)
+![](https://github.com/lindelof/power-mode-input/blob/master/image/01.gif?raw=true)
 
 
 ## Install
 
 ```bash
-npm install --save power-input
+npm install --save power-mode-input
 ```
 
 ## Usage
 
 ```jsx
-import PowerInput from 'power-input';
+import PowerModeInput from 'power-mode-input';
 
 ...
-PowerInput.make(document.getElementById("obinput"));
+PowerModeInput.make(document.getElementById("obinput"));
 
 // or
-PowerInput.make(".phone", {
+PowerModeInput.make(".phone", {
   height: 5,
   tha: [0, 360],
   g: 0.5,
@@ -44,26 +44,26 @@ PowerInput.make(".phone", {
 #### If you are in `react`, you can use it like this
 ```jsx
 componentDidMount(){
-  PowerInput.make(this.inputRef.current);
+  PowerModeInput.make(this.inputRef.current);
 }
 ```
 
 #### You can use it like this in `vue.js`
 ```vue
 mounted() {
-  PowerInput.make(this.$refs.inputRef);
+  PowerModeInput.make(this.$refs.inputRef);
 }
 ```
 
 #### Of course this can be done in `angular`
 ```javascript
 const inputElement = this.elementRef.nativeElement.querySelector('input');
-PowerInput.make(inputElement);
+PowerModeInput.make(inputElement);
 ```
 
 ## Parameter Description
 ```javascript
-PowerInput.make(input, {
+PowerModeInput.make(input, {
   height: 5,
   tha: [0, 360],
   g: 0.5,
