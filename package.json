@@ -13,7 +13,6 @@
     "node": ">=8",
     "npm": ">=5"
   },
-  "types": "dist/index.d.ts",
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "build": "rollup -c",
@@ -37,9 +36,6 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
     "rollup": "^0.64.1",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.3",

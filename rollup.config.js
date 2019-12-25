@@ -22,11 +22,8 @@ export default {
       sourcemap: true
     }
   ],
-  external: ['react', 'proton-engine','raf-manager'],
+  external: ['proton-engine','raf-manager'],
   plugins: [
-    copy({
-      targets: [{ src: 'src/index.d.ts', dest: 'dist' }]
-    }),
     external(),
     postcss({
       modules: true

@@ -1,20 +1,17 @@
-# power-input
+# PowerInput
 
 [![NPM](https://img.shields.io/npm/v/power-input.svg)](https://www.npmjs.com/package/power-input) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> A mouse particle effect react component
+> PowerInput can make your text input box more compelling
 
-A very fun react library that can be used to create mouse particle effects, which are as cool as meteors or fireballs. I often want to use react to do something fun. Using this component may make your page instantly glorious.
+This project can make your input box lively. One day I saw a vscode plugin called [`Power Mode`](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode), so I wanted to write a similar javascript library. This project uses [`proton.js`](https://github.com/a-jie/Proton) and it is also great.
 
-#### Another react particle background animation library is here [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
+#### By the way recommend a great react particle animation background component [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
 ### Online demo
-* demo(01) [https://codesandbox.io/s/power-input-l45h1](https://codesandbox.io/s/power-input-l45h1)
-* demo(02) [https://codesandbox.io/s/react-mouse-particles2-4g32z](https://codesandbox.io/s/react-mouse-particles2-4g32z)
+* demo [https://codesandbox.io/s/power-input-l45h1](https://codesandbox.io/s/power-input-l45h1)
 
 ![](https://github.com/lindelof/power-input/blob/master/image/01.gif?raw=true)
-
-![](https://github.com/lindelof/power-input/blob/master/image/02.gif?raw=true)
 
 
 ## Install
@@ -26,25 +23,53 @@ npm install --save power-input
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import PowerInput from 'power-input';
 
-import MouseParticles from 'power-input'
+...
+PowerInput.make(document.getElementById("obinput"));
 
-class Example extends Component {
-  render () {
-    return (
-      <>
-        <div>...</div>
-        <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
-      </>
-    )
-  }
+// or
+PowerInput.make(".phone", {
+  height: 5,
+  tha: [0, 360],
+  g: 0.5,
+  num: 5,
+  radius: 6,
+  circle: true,
+  alpha: [0.75, 0.1],
+  color: "random"
+});
+```
+
+#### If you are in `react`, you can use it like this
+```jsx
+componentDidMount(){
+  PowerInput.make(this.inputRef.current);
 }
 ```
 
+#### You can use it like this in `vue.js`
+```vue
+mounted() {
+  PowerInput.make(this.$refs.inputRef);
+}
+```
+
+#### Of course this can be done in `angular`
+```javascript
+const inputElement = this.elementRef.nativeElement.querySelector('input');
+PowerInput.make(inputElement);
+```
+
 ## Parameter Description
-```jsx
-<MouseParticles g={1} num={6} color="random" cull="stats,image-wrapper" level={6} />
+```javascript
+PowerInput.make(input, {
+  height: 5,
+  tha: [0, 360],
+  g: 0.5,
+  num: 5,
+  ... // Parameter
+});
 ```
 
 key | describe |type | example
@@ -53,12 +78,13 @@ key | describe |type | example
 `num` | The number of particles emitted each time | number | `3`
 `radius` | The radius of every particle | number | `10`
 `alpha` | The alpha of every particle | number | `.1`
-`tha` | The Particle emitter angle | number | `20`
+`tha` | The Particle emitter angle | array | `[0, 360]`
 `v` | The Particle emitter Particle velocity | number | `0.5`
 `life` | The life of every particle | number | `1.2`
-`color` | Particle color  | array or string | `<MouseParticles g={1} color="random" /> // or <MouseParticles g={1} color={["#ff0000", "#ccdfs2"]} />`
-`cull` | Eliminate dom's className without triggering animation  | string | `<MouseParticles cull="container,image-wrapper" />`
-`level` | Detect levels of culling animation  | number | `6`
+`color` | Particle color  | array or string | `#ffcccc`
+`random` | Random force | number | `1.2`
+`y` | Particle emitter height  | number | `2`
+`height` | Particle emitter height Ibid  | number | `2`
 
 ---
 
