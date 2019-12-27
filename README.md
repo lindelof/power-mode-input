@@ -23,12 +23,18 @@ npm install --save power-mode-input
 ## Usage
 
 ```jsx
-import PowerModeInput from 'power-mode-input';
+import PowerModeInput from "power-mode-input";
 
-...
-PowerModeInput.make(document.getElementById("obinput"));
+const input = document.getElementById("obinput");
+PowerModeInput.make(input);
 
-// or
+// close PowerModeInput
+PowerModeInput.close(input);
+
+// destroy PowerModeInput
+PowerModeInput.destroy();
+
+// another usage
 PowerModeInput.make(".phone", {
   height: 5,
   tha: [0, 360],
@@ -87,6 +93,9 @@ key | describe |type | example
 `height` | Particle emitter height Ibid  | number | `2`
 
 ---
+
+## Explanation
+For some special types of input boxes, the cursor may not be positioned correctly. I am also looking for a solution to this problem. If you know, please let me know. [See here for specific reasons](https://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome)
 
 ## Contribution
 I very much hope that you can work with me to modify the code. I also have a lot of fun ideas. Maybe you can join me to implement it.
