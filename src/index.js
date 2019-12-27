@@ -48,8 +48,9 @@ const PowerModeInput = {
 // ~~~~~~~~~~~ PROTON FUNCTION ~~~~~~~~~~~ //
 const createEmitter = (node, config = {}) => {
   const emitter = new Proton.Emitter();
-  emitter.rate = config.num ? new Proton.Rate(Math.floor(config.num * 0.7), config.num) : new Proton.Rate(6, 9);
-  // emitter.damping = 0.008;
+  emitter.rate = config.num
+    ? new Proton.Rate(Proton.getSpan(Math.floor(config.num * 0.7), config.num), 0.1)
+    : new Proton.Rate(Proton.getSpan(6, 8), 0.1);
 
   const life = config.life ? new Proton.Life(config.life) : new Proton.Life(0.5, 1.2);
   const color = config.color || getDefaultColor(node);
