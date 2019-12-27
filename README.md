@@ -9,7 +9,7 @@ This project can make your input box lively. One day I saw a vscode plugin calle
 #### By the way recommend a great react particle animation background component [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
 ### Online demo
-* demo [https://codesandbox.io/s/power-mode-input-l45h1](https://codesandbox.io/s/power-mode-input-l45h1)
+* demo [https://codesandbox.io/s/power-mode-input-y39l6](https://codesandbox.io/s/power-mode-input-y39l6)
 
 ![](https://github.com/lindelof/power-mode-input/blob/master/image/01.gif?raw=true)
 
