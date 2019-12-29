@@ -4,7 +4,7 @@
 
 > PowerModeInput can make your text input box more compelling
 
-This project can make your input box lively. One day I saw a vscode plugin called [`Power Mode`](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode), so I wanted to write a similar javascript library. This project uses [`proton.js`](https://github.com/a-jie/Proton) and it is also great.
+This project can make your input box lively. One day I saw a vscode plugin called [`Power Mode`](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode), so I wanted to write a similar javascript library. This project uses [`proton.js`](https://github.com/drawcall/Proton) and it is also great.
 
 #### By the way recommend a great react particle animation background component [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg)
 
